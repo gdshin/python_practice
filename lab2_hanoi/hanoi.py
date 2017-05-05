@@ -2,14 +2,11 @@ import sys
 
 class Hanoi:
     def __init__(self, size):
-        self.pegA = []
+        self.pegA = range(size, 0, -1)
         self.pegB = []
         self.pegC = []
         self.size = size
         self.moves = 0
-        while size > 0:
-            self.pegA.append(size)
-            size = size - 1
 
     def display(self):
         """ Displays contents in each peg list """
