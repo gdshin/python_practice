@@ -5,18 +5,20 @@ translate and untranslate individual characters based on that code.
 
 import random
 import string
+from collections import Counter
 
 def random_permute_chars():
     """ generates a random permutation of char in range a-z """
-    l = list("abcdefghijklmnopqrstuvwxyz")
-    random.shuffle(l)
-    return string.join(l, "")
+    s = string.ascii_lowercase
+    return ''.join(random.sample(s,len(s)))
 
 class CharTranslator(string):
     def __init__(self, string):
         """ takes random a-z string and checks for valid permutation """
-        self.string = string
-        
+        if Counter(string) == Counter(string.ascii_lowercase):
+            self.string = string
+        else:
+            raise Exception("Not a valid permutation of a-z string")
 
     def translate_char(self):
         """ empty """
