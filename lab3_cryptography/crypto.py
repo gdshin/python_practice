@@ -20,7 +20,7 @@ class Coder:
     def decode_file(self, in_file, out_file):
         self.file_conversion(in_file, out_file, self.obj.untranslate_char)
 
-    """ file conversion of in_file to out_file depending char_func passed """
+    """ file conversion of in_file to out_file depending on char_func passed """
     def file_conversion(self, in_file, out_file, char_func):
         with open(in_file, 'r') as f_in:
             with open(out_file, 'w') as f_out:
