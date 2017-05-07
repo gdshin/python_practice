@@ -4,18 +4,15 @@ This file does the translation and untranslation of files.
 """
 
 import char_translator
-import os.path
 
 class Coder:
     def __init__(self, ts_obj):
         self.obj = ts_obj
 
     def encode_file(self, in_file, out_file):
-        """ empty """
         self.file_conversion(in_file, out_file, self.obj.translate_char)
 
     def decode_file(self, in_file, out_file):
-        """ empty """
         self.file_conversion(in_file, out_file, self.obj.untranslate_char)
 
     def file_conversion(self, in_file, out_file, char_func):

@@ -19,7 +19,7 @@ class CharTranslator:
         if Counter(self.str_ordered) == Counter(input_str):
             self.str_random = input_str
         else:
-            raise InvalidTranslationString("Not a valid permutation of a-z string")
+            raise InvalidTranslationString("Not a valid permutation of a-z str")
 
     def translate_char(self, char):
         """ translates a single character based on permutation """
